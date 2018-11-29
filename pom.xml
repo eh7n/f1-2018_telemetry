@@ -2,10 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ech</groupId>
-	<artifactId>com.ech.f1_telemetry</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>F1 Telemetry</name>
+	<groupId>com.eh7n</groupId>
+	<artifactId>com.eh7n.f1-2018_telemetry</artifactId>
+	<version>1.0</version>
+	<name>F1 2018 Telemetry Server</name>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
