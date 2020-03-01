@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TestJar:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TestJar_jar</output-path>
+    <root id="archive" name="TestJar.jar">
+      <element id="module-output" name="TestJar" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/junit.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-device.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-example.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-core-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-core-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-device-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-device-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-gpio-extension.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-example-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-example-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-gpio-extension-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Baiduyun Download/pi4j-1.2/lib/pi4j-gpio-extension-sources.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
