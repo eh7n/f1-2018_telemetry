@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: slf4j-api-1.7.25.jar jackson-annotations-2.9.0.jar logback
+ -classic-1.2.3.jar jackson-databind-2.9.7.jar logback-core-1.2.3.jar 
+ jackson-core-2.9.7.jar
+Main-Class: com.eh7n.f1telemetry.F12018TelemetryUDPServer
+

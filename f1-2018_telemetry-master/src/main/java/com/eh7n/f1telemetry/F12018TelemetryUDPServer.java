@@ -19,7 +19,7 @@ import com.eh7n.f1telemetry.util.PacketDeserializer;
  * The base class for the F1 2018 Telemetry app. Starts up a non-blocking I/O
  * UDP server to read packets from the F1 2018 video game and then hands those
  * packets off to a parallel thread for processing based on the lambda function
- * defined. Leverages a fluent API for initialization. 
+ * defined. Leverages a fluent API for initialization.
  * 
  * Also exposes a main method for starting up a default server
  * 
@@ -39,7 +39,7 @@ public class F12018TelemetryUDPServer {
 	private Consumer<Packet> packetConsumer;
 
 	private F12018TelemetryUDPServer() {
-		bindAddress = DEFAULT_BIND_ADDRESS;
+		bindAddress = DEFAULT_BIND_ADDRESS; // if not bindTO, then the bindAddress is default
 		port = DEFAULT_PORT;
 	}
 
@@ -107,9 +107,12 @@ public class F12018TelemetryUDPServer {
 		// Packet object, if required.
 		ExecutorService executor = Executors.newSingleThreadExecutor();
 
+		// the print format is
+		//17:14:43.249 [pool-1-thread-1] TRACE c.e.f.F12018TelemetryUDPServer - {"header":{"packetFormat":2018,"packetVersion":1,"packetId":2,"sessionUID":17024013698017524279,"sessionTime":164.88759,"frameIdentifier":7462,"playerCarIndex":0},"
+
 		try (DatagramChannel channel = DatagramChannel.open()) {
 			channel.socket().bind(new InetSocketAddress(bindAddress, port));
-			log.info("Listening on " + bindAddress + ":" + port + "...");
+			log.info("Listening on " + bindAddress + ":" + port + "...");//begin to print
 			ByteBuffer buf = ByteBuffer.allocate(MAX_PACKET_SIZE);
 			buf.order(ByteOrder.LITTLE_ENDIAN);
 			while (true) {
