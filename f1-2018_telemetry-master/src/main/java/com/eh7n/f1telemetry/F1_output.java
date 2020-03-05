@@ -142,6 +142,9 @@ public class F1_output {
                 .onPort(20777)
                 .consumeWith((p) -> {
                     p.demo();
+                    p.convert_brake_to_byte();
+                    p.convert_throttle_to_byte();
+                    p.convert_direction_to_byte();
 
                     //log.trace(p.toJSON());
                     // toJSON is a string

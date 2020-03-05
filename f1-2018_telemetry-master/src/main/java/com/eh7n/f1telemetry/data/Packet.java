@@ -30,5 +30,13 @@ public abstract class Packet {
 	public void demo(){
 
 	}
-
+	public byte convert_brake_to_byte(){
+		return 0;
+	}
+	public byte convert_throttle_to_byte(){
+		return 0;
+	}
+	public byte convert_direction_to_byte(){
+		return 0;
+	}
 }
