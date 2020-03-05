@@ -3,6 +3,7 @@ package com.eh7n.f1telemetry.data;
 import com.eh7n.f1telemetry.data.elements.Header;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 public abstract class Packet {
 	
 	private Header header;
@@ -24,6 +25,10 @@ public abstract class Packet {
 			//TODO: Handle this exception
 		}
 		return json;
+	}
+
+	public void demo(){
+
 	}
 
 }

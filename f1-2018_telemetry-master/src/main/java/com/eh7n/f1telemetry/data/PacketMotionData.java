@@ -5,7 +5,13 @@ import java.util.List;
 import com.eh7n.f1telemetry.data.elements.CarMotionData;
 import com.eh7n.f1telemetry.data.elements.WheelData;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class PacketMotionData extends Packet {
+
+	private static final Logger log = LoggerFactory.getLogger(PacketMotionData.class);
+
 	
 	private List<CarMotionData> carMotionDataList;
 	private WheelData<Float> suspensionPosition;
@@ -153,5 +159,16 @@ public class PacketMotionData extends Packet {
 	public void setFrontWheelsAngle(float frontWheelsAngle) {
 		this.frontWheelsAngle = frontWheelsAngle;
 	}
-	
+	@Override
+	public void demo(){
+		//CarTelemetryData ctd = null;
+		//int i = 0;
+
+		float f_WheelsAngle = getFrontWheelsAngle();
+
+		//log.trace("speed: "+speed+"\n"+"Brake: "+brake+"\n"+"Throttle: "+throttle+"\n"+"Clutch: "+clutch+"\n"+"Gear: "+gear+"\n");
+		log.trace("FrontWheelsAngle: "+ f_WheelsAngle);
+	}
+
+
 }

@@ -105,7 +105,7 @@ public class F12018TelemetryUDPServer {
 		// but it was done to provide a simple way of providing back pressure on the
 		// incoming UDP packet handling to allow for long-running processing of the
 		// Packet object, if required.
-		ExecutorService executor = Executors.newSingleThreadExecutor();
+		ExecutorService executor = Executors.newSingleThreadExecutor();//in a separate thread
 
 		// the print format is
 		//17:14:43.249 [pool-1-thread-1] TRACE c.e.f.F12018TelemetryUDPServer - {"header":{"packetFormat":2018,"packetVersion":1,"packetId":2,"sessionUID":17024013698017524279,"sessionTime":164.88759,"frameIdentifier":7462,"playerCarIndex":0},"
@@ -141,7 +141,10 @@ public class F12018TelemetryUDPServer {
 							.bindTo("0.0.0.0")
 							.onPort(20777)
 							.consumeWith((p) -> {
-									log.trace(p.toJSON());
+									log.trace(p.toJSON());// toJSON is a string
+								//json = "";
+								//json = mapper.writeValueAsString(this);//this is packet
+								//it just print the packet(because it needs to be converted to string first)
 								})
 							.start();
 	}
