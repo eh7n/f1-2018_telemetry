@@ -77,7 +77,7 @@ public class PacketDeserializer {
 		case 3:
 			return buildPacketEventData(header);
 		case 4:
-			return buildPacketParcitipantsData(header);
+			return buildPacketParticipantsData(header);
 		case 5:
 			return buildPacketCarSetupData(header);
 		case 6:
@@ -514,7 +514,7 @@ public class PacketDeserializer {
 	 * @return a PacketParticipantsData pojo
 	 * 
 	 */
-	private PacketParticipantsData buildPacketParcitipantsData(Header header) {
+	private PacketParticipantsData buildPacketParticipantsData(Header header) {
 
 		PacketParticipantsData participantsData = new PacketParticipantsData();
 		participantsData.setHeader(header);
@@ -523,6 +523,7 @@ public class PacketDeserializer {
 		for (int k = 0; k < participantsData.getNumCars(); k++) {
 			participants.add(buildParticipantData());
 		}
+		participantsData.setParticipants(participants);
 		// Ignore the rest of the data in the buffer
 		return participantsData;
 	}

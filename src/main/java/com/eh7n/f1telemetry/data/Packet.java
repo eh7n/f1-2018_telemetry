@@ -23,7 +23,7 @@ public abstract class Packet {
 		}catch(Exception e) {
 			//TODO: Handle this exception
 		}
-		return json;
+		return json.replace("\\u0000", "");
 	}
 
 }
